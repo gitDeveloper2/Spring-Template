@@ -15,6 +15,7 @@ public class ClientManagerApplication {
 
 		SpringApplication.run(ClientManagerApplication.class, args);
 		log.info("Application started");
+
 	}
 
 }
