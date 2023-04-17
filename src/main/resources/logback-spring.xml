@@ -43,13 +43,13 @@
     </appender>
 
     <!-- Logging at INFO level -->
-    <root level="error">
+    <root level="info">
         <appender-ref ref="LogFile" />
         <appender-ref ref="ConsoleOutput" />
     </root>
 
     <!-- Logging at TRACE level -->
-    <logger name="com.log" level="error" additivity="false">
+    <logger name="com.log" level="info" additivity="false">
         <appender-ref ref="LogFile" />
         <appender-ref ref="ConsoleOutput" />
     </logger>

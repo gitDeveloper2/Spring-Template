@@ -1,1 +1,71 @@
-@import "~bootstrap/scss/bootstrap"; 
+// @import "~bootstrap/scss/bootstrap"; 
+@import "../node_modules/bootstrap/scss/bootstrap";
+// define theme colors
+//define theme fonts
+
+body{
+    height: 98vh;
+    position: relative;
+
+    .login-footer{
+        position: absolute;
+    bottom: 50px;
+    height: 10px;
+    // margin: auto;
+    left: 40%;
+    }
+}
+.login-logo{
+    position: relative;
+    height: 80px;
+    margin-top: 10px;
+    img{
+        width: 250px;
+        position: absolute;
+        margin: auto;
+        left: 40%;
+    }
+}
+.login-container{
+    width: 90%;
+    margin: auto;
+}
+
+.login-Container{
+    position: relative;
+    margin: auto;
+    border-radius: 4px;
+    background-color:white;
+    width: 80%;
+    height: 350px;
+    border: 2px solid rgb(207, 202, 202);
+    .login-container-header{
+        
+        z-index: 1;
+        box-shadow: 5px 5px 10px rgb(201, 191, 191);
+        width: 98%;
+        margin: 5px auto;
+        background-color:rgb(224, 220, 220);
+        border-radius: 4px;
+        height: 35px;
+        border: 1px solid rgb(245, 235, 235);
+        
+        h4{
+            margin: auto;
+            text-align: center;
+
+        }
+
+    }
+
+    .mycontainer{
+        position: absolute;
+        left: 40%;
+        // padding:  auto 30% auto;
+        .bootstrap-login-form{
+        // margin: 20px 400px auto;
+        
+    }
+    }
+    
+}

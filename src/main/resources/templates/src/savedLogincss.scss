@@ -1,0 +1,77 @@
+// @import "~bootstrap/scss/bootstrap"; 
+// $primarycolor:red;
+
+.login-Container{
+    position: relative;
+    margin: auto;
+    border-radius: 4px;
+    background-color:white;
+    width: 80%;
+    height: 250px;
+    border: 2px solid rgb(207, 202, 202);
+   .login-form{
+    // background-color: red;
+    margin: 30px 20px;
+   form {
+        // position: absolute;
+        margin: auto;
+        width: 50%;
+        // background-color: yellowgreen;
+        input{
+            background-color: red;
+            position: absolute;
+            left: 45%;
+            margin-bottom: ;
+            // display: inline;
+        //    float: right;
+        }
+        label{
+            position: absolute;
+            // display: inline;
+            // margin-right: 30px;
+            width: 120px;
+            left: 30%;
+            border: 2px solid greenyellow;
+            background-color: green;
+            // float: left;
+            
+        }
+
+
+    }
+    
+
+   }
+   .login-button{
+    // margin: auto;
+    button{
+        position: absolute;
+        margin: auto 45%;
+    }
+   }
+ 
+  
+    .login-container-header{
+        z-index: 1;
+        box-shadow: 5px 5px 10px rgb(201, 191, 191);
+        width: 98%;
+        margin: 5px auto;
+        background-color:rgb(224, 220, 220);
+        border-radius: 4px;
+        height: 25px;
+        border: 1px solid rgb(245, 235, 235);
+        
+        h4{
+            margin: auto;
+            text-align: center;
+
+        }
+
+    }
+    .forgot-password-link{
+        position: absolute;
+        margin:   40px 45% auto;
+        
+        
+       }
+}

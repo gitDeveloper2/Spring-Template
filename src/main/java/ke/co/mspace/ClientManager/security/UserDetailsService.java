@@ -1,5 +1,6 @@
 package ke.co.mspace.ClientManager.security;
 import ke.co.mspace.ClientManager.repositories.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,6 +10,7 @@ import java.util.Collections;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
     @Autowired
     UserRepository userRepository;
