@@ -1,0 +1,140 @@
+
+
+
+//
+// @import "~bootstrap/scss/bootstrap"; 
+@import "../node_modules/bootstrap/scss/bootstrap";
+// define theme colors
+//define theme fonts
+
+body{
+    height: 98vh;
+    position: relative;
+
+    .login-footer{
+        position: absolute;
+    bottom: 50px;
+    height: 10px;
+    // margin: auto;
+    left: 40%;
+    }
+}
+.login-logo{
+    position: relative;
+    height: 80px;
+    margin-top: 10px;
+    img{
+        width: 250px;
+        position: absolute;
+        margin: auto;
+        left: 40%;
+    }
+}
+.login-container{
+    width: 90%;
+    margin: auto;
+}
+
+.login-Container{
+    position: relative;
+    margin: auto;
+    border-radius: 4px;
+    background-color:white;
+    width: 80%;
+    height: 350px;
+    border: 2px solid rgb(207, 202, 202);
+    .login-container-header{
+        
+        z-index: 1;
+        box-shadow: 5px 5px 10px rgb(201, 191, 191);
+        width: 98%;
+        margin: 5px auto;
+        background-color:rgb(224, 220, 220);
+        border-radius: 4px;
+        height: 35px;
+        border: 1px solid rgb(245, 235, 235);
+        
+        h4{
+            margin: auto;
+            text-align: center;
+
+        }
+
+    }
+
+    .mycontainer{
+        position: absolute;
+        left: 40%;
+        // padding:  auto 30% auto;
+        .bootstrap-login-form{
+        // margin: 20px 400px auto;
+        
+    }
+    }
+    
+}
+.my-header{
+    img{
+        width: 250px;
+       }
+}
+.listgroup-wrapper{
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px;
+
+}
+
+.topic{
+    background-color: rgb(199, 194, 197);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+
+ }
+ .fragment-content{
+    background-color: white;
+    border-radius: 10px;
+ }
+
+
+
+// STYLES BELONGING TO IMPORTED SIDEBAR
+body {
+    background-color: #fbfbfb;
+  }
+  @media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 240px;
+    z-index: 600;
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+// STYLES BELONGING TO IMPORTED SIDEBAR

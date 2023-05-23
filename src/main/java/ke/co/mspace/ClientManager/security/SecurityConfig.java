@@ -16,9 +16,10 @@ import java.util.List;
 
 @Configuration
 @EnableWebSecurity
+
 public class SecurityConfig {
 
-    public static String[] AUTH_WHITELIST= { "/home"};
+    public static String[] AUTH_WHITELIST= { "/home", "/add-user","/resources/**"};
 
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
@@ -27,9 +28,36 @@ public class SecurityConfig {
                     .requestMatchers(AUTH_WHITELIST).permitAll()
                     .anyRequest()
                     .authenticated()
+//                    .permitAll()
                     )
-                .httpBasic()
-                ;
+                
+                .formLogin(form->{
+                    try {
+                        form
+                                .loginPage("/login")
+                                .permitAll()
+                                .successHandler((request, response, authentication) -> {
+                                          String username= authentication.getPrincipal().toString();
+
+
+                                            response.sendRedirect("/home");
+                                        }
+                                        )
+                                .and()
+                                .logout()
+//                                .deleteCookies()
+                                .invalidateHttpSession(true)
+                                .logoutUrl("/logout")
+                                .logoutSuccessHandler((request, response, authentication) ->
+                                        response.sendRedirect("/login"));
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+
+                })
+
+        .csrf().disable();
+
 
        return http.build();
     }
