@@ -16,8 +16,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(UserNotLoggedInException.class)
     public ModelAndView handleError(UserNotLoggedInException e) {
         ModelAndView mav=new ModelAndView();
-        System.out.println("AM being called");
-        mav.addObject("error","mu error"+e.getMessage());
+        mav.addObject("error",e.getMessage());
         mav.setViewName("src/errors");
         return mav;
     }

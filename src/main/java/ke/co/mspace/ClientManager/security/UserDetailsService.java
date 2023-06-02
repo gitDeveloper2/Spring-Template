@@ -16,18 +16,17 @@ public class UserDetailsService implements org.springframework.security.core.use
     UserRepo userRepository;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        log.info("user details service called with {}",username);
         Optional<ke.co.mspace.ClientManager.entity.User> fetchedUser=userRepository.findByUsername(username);
 
         if(fetchedUser.isPresent()){
-            log.info("user found");
+
             MyUserDetails myUserDetails=new MyUserDetails(fetchedUser.get());
-            System.out.println(myUserDetails.getAuthorities());
+            log.info("user {} found with privileges {}",myUserDetails.getUsername(),myUserDetails.getAuthorities());
+
           return myUserDetails; }
         else{
-            log.info("user not found");
-//            throw new UserNotLoggedInException("stupid");
-            throw new UsernameNotFoundException("UserRepo not found");
+            log.error("user {} not found",username);
+            throw new UsernameNotFoundException("UserRepo {} not found");
         }
     }
 }

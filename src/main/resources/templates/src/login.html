@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Documents</title>
     <link rel="stylesheet" href="/resources/style.css">
 </head>
 <body>
+<style>
+    .login_error{
+    color:red;
+    }
+</style>
+
     <div class="login-logo">
         <img src="https://smsgateway.mspace.co.ke/files/config/20200630123710-MspaceLogo2017.png" alt="">
     </div>
@@ -19,7 +25,7 @@
 
         You have been logged out.</div>
 
-    <div th:if="${param.error}">
+    <div class="login_error" th:if="${param.error}">
         Invalid username or passwords
         <p th:text="${param.error}">Test</p>
     </div>

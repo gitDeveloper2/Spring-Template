@@ -38,14 +38,12 @@ public class SecurityConfig {
                                 .permitAll()
                                 .successHandler((request, response, authentication) -> {
                                           String username= authentication.getPrincipal().toString();
-
-
                                             response.sendRedirect("/home");
                                         }
                                         )
                                 .and()
                                 .logout()
-//                                .deleteCookies()
+                                .deleteCookies()
                                 .invalidateHttpSession(true)
                                 .logoutUrl("/logout")
                                 .logoutSuccessHandler((request, response, authentication) ->

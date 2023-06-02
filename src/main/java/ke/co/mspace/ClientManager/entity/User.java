@@ -194,15 +194,4 @@ public class User {
     @Column(name = "superadmin")
     private Integer superadmin;
 
-
-//    public void setAgent(String agent) {
-//
-//
-//
-//        if ( agent == null){
-//            this.agent = "";
-//        }else{
-//            this.agent = agent;
-//        }
-//    }
 }
